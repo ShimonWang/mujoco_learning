@@ -43,14 +43,14 @@
             <geom type="cylinder" mass="100" size="0.05 0.5" rgba="0.2 0.2 0.2 1"/>
             <!-- 水平杆 -->
             <body name="rotay_am" pos="0 0 0.51">
-                <joint type="hinge" name="pivot" pos="0 0 0" axis="0 0 1" damping="0.001"
+                <joint type="hinge" name="pivot" pos="0 0 0" axis="1 0 0" damping="0.001"
                     frictionloss="0.0" stiffness="0.5"/>
                 <geom type="capsule" mass="0.01" fromto="0 0 0 0.2 0 0" size="0.01"
                     rgba="0.8 0.2 0.2 0.5"/>
                 <!-- 摆 -->
                 <body name="pendulum" pos="0.2 0 0">
                     <joint type="hinge" name="ph" pos="0 0 0" axis="1 0 0" damping="0.001"
-                        frictionloss="0.0" />
+                        frictionloss="0.0" stiffness="0.5"/>
                     <geom type="capsule" mass="0.005" fromto="0 0 0 0 0 -0.3" size="0.01"
                         rgba="0.8 0.2 0.2 1" />
                     <!-- 配重 -->

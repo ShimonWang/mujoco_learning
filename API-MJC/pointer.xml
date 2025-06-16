@@ -35,7 +35,7 @@
     </actuator>
 
     <sensor>
-        <framequat name='quat' objtype='site' objname='imu' />
+        <!-- <framequat name='quat' objtype='site' objname='imu' /> -->
         <gyro name='ang_vel' site='imu' />
         <accelerometer name="accel" site="imu" />
         <jointpos name='pivot_p' joint='pivot' />

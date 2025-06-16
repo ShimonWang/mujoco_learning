@@ -61,7 +61,8 @@
     </worldbody>
 
     <actuator>
-        <position kp="2" kv="0.1" name="pivot" joint="pivot" ctrlrange="-3.14 3.14" forcerange="-5 5" />
-        <intvelocity name="ph" joint="ph" kp="100" kv="2" actrange="-2 2"/>
+        <position kp="2" kv="0.1" name="pivot" joint="pivot" ctrlrange="-5 5" forcerange="-0.1 0.1" gear="10"/>
+        <velocity name="ph" joint="ph" kv="2"/>
+        <!-- <intvelocity name="ph" joint="ph" kp="100" kv="2" actrange="-2 2"/> -->
     </actuator>
 </mujoco>

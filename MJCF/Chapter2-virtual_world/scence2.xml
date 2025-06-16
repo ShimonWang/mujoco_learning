@@ -1,0 +1,6 @@
+<mujoco>
+    <compiler angle="radian" autolimits='true'/>
+        <option timestep="0.002" gravity="0 0 -9.81" wind="0 0 0" integrator="implicitfast"
+        density="1.225"
+        viscosity="1.8e-5" />
+</mujoco>

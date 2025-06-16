@@ -41,7 +41,7 @@
     </default>
 
     <worldbody>
-        <geom name="floor" pos="0 0 0" size="10 10 .1" type="plane" material="plane"
+        <geom name="floor" pos="0 0 0" size="0 0 .1" type="plane" material="plane"
             condim="3" />
         <light directional="true" ambient=".3 .3 .3" pos="30 30 30" dir="0 -2 -1"
             diffuse=".5 .5 .5" specular=".5 .5 .5" />
@@ -54,41 +54,54 @@
 
         <!-- <geom type="hfield" hfield="agent_eval_gym" pos="0 11 0" /> -->
 
-
+        <!-- sphere:球体 红色 -->
         <body pos="-1 0 .5">
             <freejoint />
-            <geom type="sphere" size="0.1" rgba=".5 0 0 1" />
-            <site type="capsule" size="0.05 0.1" rgba="0 0 .5 1" />
+            <geom type="sphere" size="0.1" rgba=".5 0 0 1" mass="1000"/>
+            <site type="capsule" size="0.05 0.1" rgba="1 0 .5 1" />
         </body>
+
+        <!-- box:方块 绿色 -->
         <body pos="-0.5 0 .5">
             <freejoint />
-            <geom type="box" size="0.1 0.1 0.1" material="box" density="1" contype="2"
-                conaffinity="3" />
+            <geom type="box" size=".2 0.1 0.1" material="box" density="1" contype="2"
+                conaffinity="3" mass="1"/>
         </body>
+
+        <!-- capsule:胶囊 蓝色 -->
         <body pos="0 0 .5">
             <freejoint />
-            <geom type="capsule" size="0.1 0.1" rgba="0 0 .5 1" />
+            <geom type="capsule" size="0.1 0.1" rgba="0 0 .5 0.1" />
         </body>
+
+        <!-- cylinder:圆柱体 黄色 -->
         <body pos=".5 0 .5">
             <freejoint />
-            <geom type="cylinder" size="0.1" fromto="0 0 0 0 0 0.2" rgba=".5 .5 0 1" />
+            <geom type="cylinder" size="0.1" fromto="0 0 0 0 0 1.2" rgba=".5 .5 0 1" />
         </body>
+
+        <!-- ellipsoid:椭圆1 青色 -->
         <body pos="1 0 .5">
             <freejoint />
             <geom type="ellipsoid" size="0.2 0.2 0.1" rgba="0 .5 .5 1" />
         </body>
+
+        <!-- ellipsoid:椭圆2 紫色 -->
         <body pos="1.5 0 .5">
             <freejoint />
             <geom type="ellipsoid" size="0.2 0.1 0.1" rgba=".5 0 .5 1" />
         </body>
 
+        <!-- tetrahedron:四面体 灰色 -->
         <body pos="2.0 0 .5">
             <freejoint />
             <geom type="mesh" mesh="tetrahedron" rgba=".5 .5 .5 1" />
         </body>
 
+        <!-- A:物体A（组合体） 深红色球体和蓝色胶囊 -->
         <body name="A" pos="0 0 2" euler="0.5 0 0">
-            <freejoint />
+            <!-- 可动/不可动 -->
+            <!-- <freejoint />   -->
             <geom type="sphere" size="0.1" rgba=".2 0 0 1" />
             <body name="B" pos="0 0 0.5" euler="0.5 0 0">
                 <geom type="capsule" size="0.05 0.1" rgba="0 0 .2 1" />

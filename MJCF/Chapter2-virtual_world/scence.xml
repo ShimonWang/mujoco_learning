@@ -14,15 +14,15 @@
 
     <asset>
         <mesh name="tetrahedron" vertex="0 0 0 1 0 0 0 1 0 0 0 1" />
-        <mesh file="card.obj" scale="1 1 1" />
+        <mesh file="card.obj" scale="10 10 10" />
         <texture type="2d" file="./king_of_clubs.png" />
         <material name="king_of_clubs" texture="king_of_clubs" />
-        <hfield name="agent_eval_gym" file="agent_eval_gym.png" size="10 10 1 1" />
+        <hfield name="agent_eval_gym" file="agent_eval_gym.png" size="10 10 1 10" />
         <texture type="skybox" file="../asset/desert.png"
             gridsize="3 4" gridlayout=".U..LFRB.D.." />
 
-        <!-- <texture type="skybox" builtin="flat" rgb1="1 1 .1" rgb2=".9 .9 .9" width="128" height="128"/> -->
-        <texture name="plane" type="2d" builtin="checker" rgb1=".1 .1 .1" rgb2=".9 .9 .9"
+        <!-- <texture type="skybox" builtin="checker" rgb1="1 1 .1" rgb2=".9 .9 .9" width="128" height="128"/> -->
+        <texture name="plane" type="2d" builtin="gradient" rgb1=".1 .1 .1" rgb2=".9 .9 .9"
             width="512" height="512" mark="cross" markrgb=".8 .8 .8" />
         <material name="plane" reflectance="0.3" texture="plane" texrepeat="1 1" texuniform="true" />
         <material name="box" rgba="0 0.5 0 1" emission="0" />
